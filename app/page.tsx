@@ -5,17 +5,17 @@ export default function DanceTeamWebsite() {
   ];
 
   const teamMembers = [
-    { name: 'Kim Gyury', role: 'Director and Producer' },
-    { name: 'Kim Haeun', role: 'Director' },
-    { name: 'Jo Minseo', role: 'Director' },
-    { name: 'Jung Jaehoon', role: 'Director and Choreographer' },
-    { name: 'Oh Jimin', role: 'Member' },
-    { name: 'Kim Sangyeon', role: 'Member' },
-    { name: 'Kim Yeogyeong', role: 'Member' },
-    { name: 'Kim Taeyoon', role: 'Member' },
-    { name: 'Kim Sooyeon', role: 'Member' },
-    { name: 'Oh On', role: 'Member' },
-    { name: '? Hyeonjeong', role: 'Member' },
+    { name: 'Kim Gyury', role: 'Director and Producer', image:'/images/members/orange.avif' },
+    { name: 'Kim Haeun', role: 'Director',image:'' },
+    { name: 'Jo Minseo', role: 'Director',image:'' },
+    { name: 'Jung Jaehoon', role: 'Director and Choreographer',image:'' },
+    { name: 'Oh Jimin', role: 'Member',image:'' },
+    { name: 'Kim Sangyeon', role: 'Member',image:'' },
+    { name: 'Kim Yeogyeong', role: 'Member',image:'' },
+    { name: 'Kim Taeyoon', role: 'Member',image:'' },
+    { name: 'Kim Sooyeon', role: 'Member',image:'' },
+    { name: 'Oh On', role: 'Member',image:'' },
+    { name: '? Hyeonjeong', role: 'Member',image:'' },
   ];
 
   const gallery = [
@@ -148,8 +148,16 @@ export default function DanceTeamWebsite() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member) => (
               <div key={member.name + member.role} className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
-                <div className="mb-4 aspect-square rounded-[1.5rem] bg-white/10" />
-                <h3 className="text-lg font-semibold">{member.name}</h3>
+              <div className="mb-4 aspect-square overflow-hidden rounded-[1.5rem] bg-white/10">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
+                ) : null}
+              </div>                
+              <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-white/60">{member.role}</p>
               </div>
             ))}
