@@ -34,8 +34,7 @@ export default function DanceTeamWebsite() {
       />
 
       {/* dark overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-black/70 to-indigo-950/30" />
-
+      <div className="absolute inset-0 bg-gradient-to-br from-black/25 via-black/55 to-indigo-950/20" />
       {/* light glow to keep aesthetic */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_30%,rgba(255,255,255,0.08),transparent_10%)]" />
 
@@ -49,10 +48,10 @@ export default function DanceTeamWebsite() {
                 <p className="text-sm text-white/60">the trace of our light</p>
               </div>
               <div className="hidden gap-6 text-sm md:flex text-white/80">
-                <a href="#about" className="hover:text-white">About</a>
-                <a href="#events" className="hover:text-white">Events</a>
-                <a href="#team" className="hover:text-white">Team</a>
-                <a href="#join" className="hover:text-white">Contact</a>
+                <a href="#about" className="transition hover:text-white hover:opacity-100">About</a>
+                <a href="#events" className="transition hover:text-white hover:opacity-100">Events</a>
+                <a href="#team" className="transition hover:text-white hover:opacity-100">Team</a>
+                <a href="#join" className="transition hover:text-white hover:opacity-100">Contact</a>
               </div>
             </nav>
 
@@ -162,8 +161,14 @@ export default function DanceTeamWebsite() {
           <h2 className="mb-8 text-3xl font-semibold">Our Work</h2>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {gallery.map((item) => (
-              <div key={item.src} className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-                <img src={item.src} alt={item.alt} className="aspect-[3/4] w-full object-cover" />
+              <div
+                key={item.src}
+                className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition duration-300 hover:border-white/20 hover:bg-white/[0.07]"
+              >              <img
+                src={item.src}
+                alt={item.alt}
+                className="aspect-[3/4] w-full object-cover transition duration-500 hover:scale-105 hover:opacity-90"
+              />              
               </div>
             ))}
           </div>
