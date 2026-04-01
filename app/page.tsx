@@ -1,11 +1,11 @@
-export default function DanceTeamWebsiteStarter() {
+export default function DanceTeamWebsite() {
   const upcomingEvents = [
-    { date: 'May 1', title: 'Practice Begins', location: 'Sinchon' },
+    { date: 'May', title: 'Practice Begins', location: 'Sinchon' },
     { date: 'December', title: 'Performance', location: 'TBD' },
   ];
 
   const teamMembers = [
-    { name: 'Kim Gyuri', role: 'Director' },
+    { name: 'Kim Gyury', role: 'Director' },
     { name: 'Kim Haeun', role: 'Director' },
     { name: 'Jo Minseo', role: 'Director' },
     { name: 'Jung Jaehoon', role: 'Director and Choreographer' },
@@ -27,17 +27,17 @@ export default function DanceTeamWebsiteStarter() {
 
   return (
     <div className="min-h-screen text-white relative bg-black">
-      {/* YOUR background image (rename your file to bg.jpg for this to work) */}
+      {/* background image*/}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564')" }}
+        style={{ backgroundImage: "url('/images/background.png')" }}
       />
 
-      {/* strong dark overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-indigo-950/80" />
+      {/* dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-black/70 to-indigo-950/30" />
 
-      {/* subtle light glow to keep aesthetic */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_30%,rgba(255,255,255,0.08),transparent_50%)]" />
+      {/* light glow to keep aesthetic */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_30%,rgba(255,255,255,0.08),transparent_10%)]" />
 
       <div className="relative z-10">
         <section className="relative overflow-hidden">
@@ -46,13 +46,13 @@ export default function DanceTeamWebsiteStarter() {
             <nav className="mb-16 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur">
               <div>
                 <p className="text-lg font-semibold tracking-wide">DIADENT</p>
-                <p className="text-sm text-white/60">In the Wake of Light</p>
+                <p className="text-sm text-white/60">the trace of our light</p>
               </div>
               <div className="hidden gap-6 text-sm md:flex text-white/80">
                 <a href="#about" className="hover:text-white">About</a>
                 <a href="#events" className="hover:text-white">Events</a>
                 <a href="#team" className="hover:text-white">Team</a>
-                <a href="#join" className="hover:text-white">Contact Us</a>
+                <a href="#join" className="hover:text-white">Contact</a>
               </div>
             </nav>
 
@@ -63,7 +63,7 @@ export default function DanceTeamWebsiteStarter() {
                   Placeholder Message
                 </h1>
                 <p className="mb-8 max-w-xl text-lg text-white/70">
-                  We are a dance and performance team based in Seoul, Korea.
+                  We are a dance and performance team based in Seoul, Korea. 
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="#join" className="rounded-2xl bg-white px-5 py-3 font-medium text-black shadow-lg shadow-white/10">
@@ -110,7 +110,7 @@ export default function DanceTeamWebsiteStarter() {
               <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">About</p>
               <h2 className="mb-4 text-3xl font-semibold">Our Story</h2>
               <p className="text-white/70">
-                Write a warm, clear intro here.
+                Starting with our individual dreams and united by the goal "빛의 흔적을 따라", we are artists on a journey of discovery, blahblah...
               </p>
             </div>
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
