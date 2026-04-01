@@ -5,17 +5,17 @@ export default function DanceTeamWebsite() {
   ];
 
   const teamMembers = [
-    { name: 'Kim Gyury', role: 'Director' },
+    { name: 'Kim Gyury', role: 'Director and Producer' },
     { name: 'Kim Haeun', role: 'Director' },
     { name: 'Jo Minseo', role: 'Director' },
     { name: 'Jung Jaehoon', role: 'Director and Choreographer' },
-    { name: 'Oh Jimin', role: 'Dancer' },
-    { name: 'Kim Sangyeon', role: 'Dancer' },
-    { name: 'Kim Yeogyeong', role: 'Dancer' },
-    { name: 'Kim Taeyoon', role: 'Dancer' },
-    { name: 'Kim Sooyeon', role: 'Dancer' },
-    { name: 'Oh On', role: 'Dancer' },
-    { name: '? Hyeonjeong', role: 'Dancer' },
+    { name: 'Oh Jimin', role: 'Member' },
+    { name: 'Kim Sangyeon', role: 'Member' },
+    { name: 'Kim Yeogyeong', role: 'Member' },
+    { name: 'Kim Taeyoon', role: 'Member' },
+    { name: 'Kim Sooyeon', role: 'Member' },
+    { name: 'Oh On', role: 'Member' },
+    { name: '? Hyeonjeong', role: 'Member' },
   ];
 
   const gallery = [
@@ -159,7 +159,7 @@ export default function DanceTeamWebsite() {
 
         <section className="mx-auto max-w-6xl px-6 py-4">
           <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">Gallery</p>
-          <h2 className="mb-8 text-3xl font-semibold">Moments worth showing</h2>
+          <h2 className="mb-8 text-3xl font-semibold">Our Work</h2>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {gallery.map((item) => (
               <div key={item.src} className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
@@ -174,20 +174,27 @@ export default function DanceTeamWebsite() {
             <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">Contact Information</p>
             <h2 className="mb-4 text-3xl font-semibold">Contact us</h2>
             <p className="mb-8 max-w-2xl text-white/70">
-              Reach out to us for collaborations, auditions, or inquiries.
+              Reach out to us for collaborations or inquiries. <br />
+              Email: gyury1208@naver.com <br />
+              Instagram: @diadent__
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="mailto:gyury1208@naver.com" className="rounded-2xl bg-white px-5 py-3 font-medium text-black">
+              <a 
+                href="https://mail.google.com/mail/?view=cm&to=gyury1208@naver.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl bg-white px-5 py-3 font-medium text-black"
+              >
                 Email
               </a>
               <a 
-  href="https://www.instagram.com/diadent__/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-medium text-white"
->
-  Instagram
-</a>
+                href="https://www.instagram.com/diadent__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-medium text-white"
+              >
+                Instagram
+              </a>
             </div>
           </div>
         </section>
